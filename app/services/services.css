@@ -1,0 +1,389 @@
+/* ============ TOKENS (agar already global hain toh skip) ============ */
+:root {
+  --brand: #c2185b;
+  --brand-2: #ff6f91;
+  --brand-3: #ffd36e;
+  --ink: #1a1220;
+  --muted: #6b6173;
+  --border: rgba(26, 18, 32, 0.08);
+}
+
+/* ============ SHARED EYEBROW ============ */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: 16px;
+}
+.eyebrow--center { justify-content: center; }
+.eyebrow--light { color: rgba(255, 255, 255, 0.85); }
+.eyebrow__line {
+  width: 24px;
+  height: 1.5px;
+  background: currentColor;
+  border-radius: 2px;
+}
+
+/* ============ INTRO ============ */
+.svc-intro {
+  padding: 72px 0 24px;
+  text-align: center;
+}
+.svc-intro__inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.svc-intro__title {
+  font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+.svc-intro__sub {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ============ SERVICES GRID ============ */
+.svc-section { padding-top: 40px; }
+
+.svc-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px 24px 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: svc-fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  transition: transform 0.35s ease, box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+@keyframes svc-fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.svc-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(194, 24, 91, 0.22);
+  box-shadow: 0 24px 48px rgba(194, 24, 91, 0.14);
+}
+
+.svc-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+.svc-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  color: var(--brand);
+  background: linear-gradient(
+    135deg,
+    rgba(194, 24, 91, 0.1),
+    rgba(255, 111, 145, 0.18)
+  );
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.4s ease, color 0.4s ease;
+}
+.svc-card:hover .svc-card__icon {
+  transform: scale(1.08) rotate(-4deg);
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: #fff;
+}
+.svc-card__index {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(194, 24, 91, 0.3);
+  transition: color 0.3s ease;
+}
+.svc-card:hover .svc-card__index {
+  color: var(--brand);
+}
+
+.svc-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+.svc-card__desc {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--muted);
+  margin: 0 0 20px;
+  flex: 1;
+}
+
+.svc-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--brand);
+  text-decoration: none;
+  margin-top: auto;
+  align-self: flex-start;
+  transition: gap 0.25s ease;
+}
+.svc-card__link-arrow {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(194, 24, 91, 0.1);
+  font-size: 0.72rem;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+.svc-card:hover .svc-card__link {
+  gap: 12px;
+}
+.svc-card:hover .svc-card__link-arrow {
+  background: var(--brand);
+  color: #fff;
+  transform: translateX(2px);
+}
+
+/* Decorative glow that follows hover */
+.svc-card__glow {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 111, 145, 0.22),
+    transparent 65%
+  );
+  top: -110px;
+  right: -110px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.svc-card:hover .svc-card__glow {
+  opacity: 1;
+}
+
+/* ============ OFFER BAND ============ */
+.svc-offers {
+  position: relative;
+  padding: 88px 0;
+  background: linear-gradient(135deg, #2a0e1b 0%, #4a1230 45%, #7c1d47 100%);
+  color: #fff;
+  overflow: hidden;
+  isolation: isolate;
+}
+.svc-offers::before {
+  content: "";
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 111, 145, 0.35),
+    transparent 65%
+  );
+  top: -260px;
+  right: -160px;
+  filter: blur(60px);
+  z-index: -1;
+  pointer-events: none;
+}
+.svc-offers::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 211, 110, 0.25),
+    transparent 65%
+  );
+  bottom: -180px;
+  left: -120px;
+  filter: blur(60px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.svc-offers__head {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.svc-offers__title {
+  font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: #fff;
+  margin: 0;
+}
+.svc-offers__title-accent {
+  color: var(--brand-3);
+}
+
+/* Offer tiles */
+.svc-offer {
+  position: relative;
+  padding: 32px 24px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: svc-fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  transition: transform 0.35s ease, background 0.35s ease,
+    border-color 0.35s ease;
+}
+.svc-offer:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 211, 110, 0.4);
+}
+.svc-offer--pink {
+  background: linear-gradient(
+    135deg,
+    rgba(194, 24, 91, 0.5),
+    rgba(255, 111, 145, 0.3)
+  );
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.svc-offer__num {
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 12px;
+  color: var(--brand-3);
+  transition: transform 0.4s ease;
+}
+.svc-offer:hover .svc-offer__num {
+  transform: scale(1.05);
+  transform-origin: left center;
+}
+.svc-offer--pink .svc-offer__num { color: #fff; }
+
+.svc-offer__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.svc-offer__desc {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+.svc-offer__shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.18) 50%,
+    transparent 60%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.8s ease;
+  pointer-events: none;
+}
+.svc-offer:hover .svc-offer__shine {
+  transform: translateX(100%);
+}
+
+/* CTA row */
+.svc-offers__cta {
+  margin-top: 48px;
+  text-align: center;
+}
+.svc-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 30px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--brand);
+  background: #fff;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.25s ease;
+}
+.svc-cta-btn:hover {
+  color: var(--brand);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.3);
+}
+.svc-cta-btn__arrow {
+  font-size: 0.9rem;
+  transition: transform 0.25s ease;
+}
+.svc-cta-btn:hover .svc-cta-btn__arrow {
+  transform: translateX(4px);
+}
+.svc-offers__note {
+  margin: 14px 0 0;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 767px) {
+  .svc-intro { padding: 48px 0 16px; }
+  .svc-offers { padding: 60px 0; }
+  .svc-offers__cta { margin-top: 32px; }
+  .svc-card { padding: 22px 20px 20px; }
+  .svc-card__icon { width: 48px; height: 48px; font-size: 1.3rem; }
+}
+
+/* ============ REDUCED MOTION ============ */
+@media (prefers-reduced-motion: reduce) {
+  .svc-card,
+  .svc-offer {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .svc-offer__shine,
+  .svc-card__glow {
+    display: none;
+  }
+}
