@@ -2,26 +2,26 @@ import PageHero from "@/components/PageHero";
 import { GALLERY_ITEMS, GALLERY_FILTERS } from "@/lib/data";
 
 export const metadata = {
-  title: "Clinic Gallery | We Care Medical Zone",
+  title: "Care Areas | Dr. Salama Haneef",
   description:
-    "View the clinic gallery of We Care Medical Zone – modern facilities, consultation rooms and patient care areas by Dr. Salama Hanif, Raebareli.",
+    "Explore the care areas offered by Dr. Salama Haneef in Raebareli – gynecology, pregnancy care, skin and hair care and clinical nutrition guidance.",
 };
 
 export default function GalleryPage() {
   return (
     <>
       <PageHero
-        current="Gallery"
-        title="Clinic Gallery"
-        subtitle="A glimpse into our modern, clean and patient-friendly clinic environment."
+        current="Care Areas"
+        title="Our Care Areas"
+        subtitle="Gynecology, skin care and clinical nutrition guidance — compassionate care by Dr. Salama Haneef."
       />
 
       <section className="section-pad">
         <div className="container">
           <div className="section-head text-center fade-up">
-            <div className="section-label">Our Facilities</div>
+            <div className="section-label">What We Care For</div>
             <div className="divider-pink mx-auto" />
-            <h2 className="section-title">Modern Clinic Infrastructure</h2>
+            <h2 className="section-title">Complete Care for Women's Health</h2>
           </div>
 
           {/* Filter Tabs */}
@@ -52,7 +52,7 @@ export default function GalleryPage() {
           </div>
 
           <div className="text-center mt-5 fade-up">
-            <p className="text-muted mb-3">Want to visit our clinic? Schedule an appointment today.</p>
+            <p className="text-muted mb-3">Want to consult Dr. Salama Haneef? Schedule an appointment today.</p>
             <a href="#" data-bs-toggle="modal" data-bs-target="#apptModal" className="btn-pink btn btn-lg">
               <i className="bi bi-calendar-plus me-2" />
               Book Your Visit

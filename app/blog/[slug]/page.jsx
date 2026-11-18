@@ -19,7 +19,7 @@ export function generateMetadata({ params }) {
   const post = BLOG_POSTS.find((p) => getPostSlug(p) === params.slug);
   if (!post) return { title: "Article Not Found" };
   return {
-    title: `${post.title} | We Care Medical Zone`,
+    title: `${post.title} | Dr. Salama Haneef`,
     description: post.excerpt,
     openGraph: {
       title: post.title,
@@ -816,7 +816,7 @@ export default function BlogDetailPage({ params }) {
                 </div>
                 <div>
                   <div className="bd-meta__strong">{CLINIC.doctor}</div>
-                  <div style={{ fontSize: "0.75rem" }}>Ayurvedic Gynecologist</div>
+                  <div style={{ fontSize: "0.75rem" }}>{CLINIC.role}</div>
                 </div>
               </div>
               <div className="bd-meta__divider" />
@@ -857,7 +857,7 @@ export default function BlogDetailPage({ params }) {
                   Women&apos;s health is a lifelong journey — and understanding your body is
                   the first step toward caring for it well. In this article,{" "}
                   <strong>{CLINIC.doctor}</strong> shares practical, evidence-informed
-                  guidance drawn from years of Ayurvedic and gynecological practice.
+                  guidance drawn from her gynecological practice.
                 </p>
 
                 {/* Key takeaways */}
@@ -883,7 +883,7 @@ export default function BlogDetailPage({ params }) {
                       <span className="bd-takeaways__tick">
                         <i className="bi bi-check2" />
                       </span>
-                      Personalized Ayurvedic care complements modern diagnostics beautifully.
+                      Personalized care and modern medicine work best together.
                     </li>
                   </ul>
                 </div>
@@ -896,14 +896,14 @@ export default function BlogDetailPage({ params }) {
                   powerful — it gives you the chance to act early.
                 </p>
                 <p>
-                  At We Care Medical Zone, every consultation begins with listening —
+                  With {CLINIC.doctor}, every consultation begins with listening —
                   to your history, your routine, and your concerns. From there, we build a
                   care plan that respects your lifestyle and your body&apos;s natural rhythms.
                 </p>
 
                 <blockquote>
-                  The goal of Ayurveda is not just to treat symptoms, but to restore the
-                  body&apos;s natural balance — so healing becomes lasting, not temporary.
+                  The goal of treatment is not just to relieve symptoms, but to find and
+                  address the root cause — so healing becomes lasting, not temporary.
                 </blockquote>
 
                 <h2 id="symptoms">Common Symptoms to Watch For</h2>
@@ -946,17 +946,16 @@ export default function BlogDetailPage({ params }) {
                   </a>
                 </div>
 
-                <h2 id="ayurveda">How Ayurveda Helps</h2>
+                <h2 id="our-approach">Our Approach to Care</h2>
                 <p>
-                  Ayurveda approaches women&apos;s health holistically — focusing on
-                  digestion, sleep, stress, and hormonal balance together. Rather than
-                  managing one symptom in isolation, the treatment plan supports the whole
-                  system.
+                  Women&apos;s health works best when looked at as a whole — hormones,
+                  nutrition, sleep and stress together. Rather than managing one symptom
+                  in isolation, the treatment plan supports the whole system.
                 </p>
                 <p>
-                  Depending on your Prakriti (constitution) and current imbalances, the
-                  plan may include dietary adjustments, herbal formulations, gentle
-                  therapies, and lifestyle routines that fit naturally into your day.
+                  Depending on your symptoms and test results, the plan may include
+                  medicines, dietary adjustments and lifestyle routines that fit naturally
+                  into your day.
                 </p>
 
                 <h3>Key principles we follow:</h3>
@@ -1019,12 +1018,11 @@ export default function BlogDetailPage({ params }) {
                   <div className="bd-author__content">
                     <p className="bd-author__name">{CLINIC.doctor}</p>
                     <p className="bd-author__role">
-                      Ayurvedic Gynecologist &amp; Obstetrician
+                      {CLINIC.role}
                     </p>
                     <p className="bd-author__bio">
-                      With over a decade of experience, {CLINIC.doctor} blends Ayurvedic
-                      tradition with modern gynecological practice to help women heal
-                      naturally and confidently.
+                      {CLINIC.doctor}, a BHU graduate, combines compassionate care with modern
+                      medicine, diet and lifestyle guidance to help women heal confidently.
                     </p>
                   </div>
                   <Link href="/about" className="bd-author__link">
@@ -1092,7 +1090,7 @@ export default function BlogDetailPage({ params }) {
                       <a href="#symptoms">Common Symptoms</a>
                     </li>
                     <li>
-                      <a href="#ayurveda">How Ayurveda Helps</a>
+                      <a href="#our-approach">Our Approach to Care</a>
                     </li>
                     <li>
                       <a href="#when-to-see">When to See a Doctor</a>

@@ -8,10 +8,10 @@ export default function Footer() {
         <div className="row g-5">
           <div className="col-lg-4 col-md-6">
             <div className="footer-brand">
-              <span>We Care</span> Medical Zone
+              <span>Dr. Salama</span> Haneef
             </div>
             <p style={{ fontSize: ".88rem", color: "#8492a6", maxWidth: 300, lineHeight: 1.8 }}>
-              Dedicated to Hope, Healing and Recovery. Expert Ayurvedic gynecological care by{" "}
+              {CLINIC.tagline}. Compassionate gynecology and skin care by{" "}
               {CLINIC.doctor} in Raebareli, Uttar Pradesh.
             </p>
             <div className="mt-3">
@@ -28,20 +28,20 @@ export default function Footer() {
             <Link href="/about" className="footer-link">About Doctor</Link>
             <Link href="/services" className="footer-link">Services</Link>
             <Link href="/treatments" className="footer-link">Treatments</Link>
-            <Link href="/gallery" className="footer-link">Gallery</Link>
+            <Link href="/gallery" className="footer-link">Care Areas</Link>
             <Link href="/blog" className="footer-link">Blog</Link>
             <Link href="/contact" className="footer-link">Contact</Link>
           </div>
 
           <div className="col-lg-2 col-md-6 col-6">
             <h6>Services</h6>
-            <Link href="/services" className="footer-link">Ayurvedic PCOD Treatment</Link>
-            <Link href="/services" className="footer-link">Ayurvedic Infertility</Link>
-            <Link href="/services" className="footer-link">Ayurvedic Pregnancy Care</Link>
-            <Link href="/services" className="footer-link">Ovarian Cyst (Ayurveda)</Link>
-            <Link href="/services" className="footer-link">Fibroid (Ayurveda)</Link>
-            <Link href="/services" className="footer-link">Menopause (Ayurveda)</Link>
-            <Link href="/services" className="footer-link">Skin & Hair (Ayurveda)</Link>
+            <Link href="/services" className="footer-link">PCOD / PCOS Treatment</Link>
+            <Link href="/services" className="footer-link">Infertility Treatment</Link>
+            <Link href="/services" className="footer-link">Pregnancy Care</Link>
+            <Link href="/services" className="footer-link">Ovarian Cyst Treatment</Link>
+            <Link href="/services" className="footer-link">Fibroid Treatment</Link>
+            <Link href="/services" className="footer-link">White Discharge & UTI</Link>
+            <Link href="/services" className="footer-link">Skin & Hair Care</Link>
           </div>
 
           <div className="col-lg-4 col-md-6">
@@ -76,8 +76,8 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2">
-          <span>© {new Date().getFullYear()} We Care Medical Zone. All Rights Reserved.</span>
-          <span>{CLINIC.doctor} | Ayurvedic Gynecologist &amp; Obstetrician | Raebareli, UP</span>
+          <span>© {new Date().getFullYear()} {CLINIC.doctor}. All Rights Reserved.</span>
+          <span>{CLINIC.role} | Raebareli, UP</span>
         </div>
       </div>
     </footer>

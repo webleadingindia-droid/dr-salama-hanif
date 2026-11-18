@@ -420,7 +420,7 @@ export default function AppointmentModal() {
                     Book Your Appointment
                   </h5>
                   <p className="appt-modal__subtitle">
-                    Ayurvedic consultation with our specialist
+                    Consultation with Dr. Salama Haneef
                   </p>
                 </div>
               </div>

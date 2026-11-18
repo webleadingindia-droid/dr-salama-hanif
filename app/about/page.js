@@ -2,9 +2,9 @@ import PageHero from "@/components/PageHero";
 import { CLINIC, EDUCATION, SPECIALIZATIONS } from "@/lib/data";
 
 export const metadata = {
-  title: "About Dr. Salama Hanif | Gynecologist Raebareli",
+  title: "About Dr. Salama Haneef | Gynecologist Raebareli",
   description:
-    "Learn about Dr. Salama Hanif, expert gynecologist & obstetrician at We Care Medical Zone, Raebareli. 10+ years experience in women's health.",
+    "Learn about Dr. Salama Haneef, BHU graduate, Gynecologist & Skin Expert and Clinical Nutritionist in Raebareli.",
 };
 
 export default function AboutPage() {
@@ -13,7 +13,7 @@ export default function AboutPage() {
       <PageHero
         current="About Doctor"
         title={`About ${CLINIC.doctor}`}
-        subtitle="Expert Gynecologist & Obstetrician committed to women's health in Raebareli"
+        subtitle="Gynecologist & Skin Expert committed to women's health in Raebareli"
       />
 
       {/* DOCTOR PROFILE */}
@@ -37,8 +37,8 @@ export default function AboutPage() {
                 />
                 <div className="doctor-badge-wrap">
                   <div className="exp-badge">
-                    <strong>10+</strong>
-                    <span>Years of Experience</span>
+                    <strong>BHU</strong>
+                    <span>Graduate</span>
                   </div>
                 </div>
               </div>
@@ -48,24 +48,21 @@ export default function AboutPage() {
               <div className="divider-pink" />
               <h2 className="section-title mb-3">{CLINIC.doctor}</h2>
               <h6 className="text-pink mb-4" style={{ fontFamily: "'DM Sans',sans-serif", fontWeight: 600 }}>
-                {CLINIC.role} | We Care Medical Zone, Raebareli
+                {CLINIC.role} | Raebareli, Uttar Pradesh
               </h6>
               <p className="text-muted mb-3">
-                {CLINIC.doctor} is a highly qualified and compassionate Gynecologist &amp;
-                Obstetrician with over 10 years of dedicated experience in women&apos;s health.
-                She has helped thousands of women across Raebareli and surrounding regions with
-                personalized, evidence-based treatments.
+                {CLINIC.doctor} is a graduate of Banaras Hindu University (BHU) and an experienced
+                women&apos;s health specialist — a Gynecologist &amp; Skin Expert and Clinical
+                Nutritionist &amp; Health Expert, helping women across Raebareli and nearby areas.
               </p>
               <p className="text-muted mb-4">
-                Her patient-first approach, clear communication style, and commitment to holistic
-                wellness have made her one of the most trusted names in gynecology in Uttar
-                Pradesh.
+                Her approach combines compassionate care, modern medicine and patient trust, with
+                personalised treatment, diet and lifestyle guidance for healing from within.
               </p>
               <div className="mb-4">
-                <span className="cred-pill"><i className="bi bi-patch-check-fill me-1" />MBBS</span>
-                <span className="cred-pill"><i className="bi bi-patch-check-fill me-1" />MD – Obstetrics &amp; Gynecology</span>
-                <span className="cred-pill"><i className="bi bi-award-fill me-1" />10+ Years Experience</span>
-                <span className="cred-pill"><i className="bi bi-people-fill me-1" />5000+ Patients</span>
+                <span className="cred-pill"><i className="bi bi-patch-check-fill me-1" />BHU Graduate</span>
+                <span className="cred-pill"><i className="bi bi-patch-check-fill me-1" />Gynecologist &amp; Skin Expert</span>
+                <span className="cred-pill"><i className="bi bi-award-fill me-1" />Clinical Nutritionist</span>
               </div>
               <a href="#" data-bs-toggle="modal" data-bs-target="#apptModal" className="btn-pink btn">
                 <i className="bi bi-calendar-plus me-2" />

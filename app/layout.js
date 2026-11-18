@@ -10,13 +10,13 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata = {
   title: {
-    default: "Best Ayurvedic Gynecologist in Raebareli | Dr. Salama Hanif | We Care Medical Zone",
-    template: "%s | We Care Medical Zone",
+    default: "Dr. Salama Haneef | Gynecologist & Skin Expert in Raebareli",
+    template: "%s | Dr. Salama Haneef",
   },
   description:
-    "Consult Dr. Salama Hanif, experienced Ayurvedic Gynecologist & Obstetrician in Raebareli at We Care Medical Zone for PCOD, infertility, pregnancy care and women's health treatments.",
+    "Consult Dr. Salama Haneef, BHU graduate, Gynecologist & Skin Expert in Raebareli for PCOD, infertility, pregnancy care, skin care and women's health treatments.",
   keywords:
-    "ayurvedic gynecologist raebareli, Dr Salama Hanif, ayurvedic PCOD treatment, infertility, pregnancy care, women health, we care medical zone",
+    "gynecologist raebareli, Dr Salama Haneef, skin expert raebareli, PCOD treatment, infertility, pregnancy care, women health",
 };
 
 export default function RootLayout({ children }) {

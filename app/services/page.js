@@ -4,9 +4,9 @@ import { SERVICES_FULL, OFFER_BAND } from "@/lib/data";
 import "./services.css";
 
 export const metadata = {
-  title: "Women's Health Services | Dr. Salama Hanif",
+  title: "Women's Health Services | Dr. Salama Haneef",
   description:
-    "Explore all women's health services at We Care Medical Zone – PCOD, infertility, pregnancy, fibroid, menopause and more by Dr. Salama Hanif in Raebareli.",
+    "Explore women's health and skin care services by Dr. Salama Haneef in Raebareli – PCOD, infertility, pregnancy, fibroid, white discharge and more.",
 };
 
 export default function ServicesPage() {
@@ -31,8 +31,8 @@ export default function ServicesPage() {
               Specialized Care for <span className="text-pink">Every Woman</span>
             </h2>
             <p className="svc-intro__sub">
-              From adolescence to menopause — every stage of a woman&apos;s life deserves expert,
-              compassionate care. Explore our full range of Ayurvedic &amp; gynecological services.
+              From adolescence to motherhood — every stage of a woman&apos;s life deserves expert,
+              compassionate care. Explore our full range of gynecology and skin care services.
             </p>
           </div>
         </div>

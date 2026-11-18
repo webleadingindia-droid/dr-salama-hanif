@@ -43,7 +43,7 @@ export default function Navbar() {
               <span className="nav-brand__mark">
                 <img
                   src="https://plain-apac-prod-public.komododecks.com/202611/16/67xMxn73fwp6hypx41d1/image.png"
-                  alt="Ayurvedic treatment for women's wellness"
+                  alt="Dr. Salama Haneef"
                 />
               </span>
             </Link>

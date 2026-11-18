@@ -44,12 +44,12 @@ export default function ScrollReveal() {
       document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
 
       // Store so cleanup can disconnect if the route changes quickly.
-      window.__weCareRevealObserver = observer;
+      window.__revealObserver = observer;
     });
 
     return () => {
       cancelAnimationFrame(raf);
-      window.__weCareRevealObserver?.disconnect();
+      window.__revealObserver?.disconnect();
     };
   }, [pathname]);
 

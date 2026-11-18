@@ -3,9 +3,9 @@ import AppointmentPageForm from "@/components/AppointmentPageForm";
 import { CLINIC } from "@/lib/data";
 
 export const metadata = {
-  title: "Book Appointment | We Care Medical Zone",
+  title: "Book Appointment | Dr. Salama Haneef",
   description:
-    "Book an appointment with Dr. Salama Hanif at We Care Medical Zone, Raebareli. Get 50% off on your first consultation. Call 6389933191.",
+    "Book an appointment with Dr. Salama Haneef in Raebareli. Get 50% off on your first consultation. Call 6389933191.",
 };
 
 export default function AppointmentPage() {

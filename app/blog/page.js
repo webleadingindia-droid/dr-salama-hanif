@@ -4,7 +4,7 @@ import { BLOG_POSTS, CLINIC } from "@/lib/data";
 export const metadata = {
   title: "Women's Health Blog | PCOD, Pregnancy, Hygiene Tips",
   description:
-    "Read expert articles on PCOD, pregnancy care, women's hygiene and menstrual health by Dr. Salama Hanif at We Care Medical Zone, Raebareli.",
+    "Read expert articles on PCOD, hormonal health, pregnancy care, intimate hygiene and periods by Dr. Salama Haneef, Raebareli.",
 };
 
 export default function BlogPage() {

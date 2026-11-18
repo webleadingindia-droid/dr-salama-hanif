@@ -5,7 +5,7 @@ import "./treatments.css";
 export const metadata = {
   title: "Women's Health Treatments | PCOD, Infertility, Pregnancy",
   description:
-    "Detailed information on PCOD, infertility, pregnancy care, menstrual problems, menopause, fibroid and ovarian cyst treatments at We Care Medical Zone by Dr. Salama Hanif.",
+    "Detailed information on PCOD, infertility, pregnancy care, menstrual problems, fibroid, ovarian cyst and white discharge treatments by Dr. Salama Haneef.",
 };
 
 export default function TreatmentsPage() {
@@ -30,8 +30,8 @@ export default function TreatmentsPage() {
               Expert Care for <span className="text-pink">Every Concern</span>
             </h2>
             <p className="tr-intro__sub">
-              From PCOD to pregnancy, menopause to fibroids — explore how we diagnose and treat
-              each condition with personalized Ayurvedic &amp; gynecological care.
+              From PCOD to pregnancy, fibroids to white discharge — explore how we diagnose and treat
+              each condition with personalized, compassionate care.
             </p>
           </div>
         </div>
@@ -136,7 +136,7 @@ export default function TreatmentsPage() {
                   </div>
 
                   <p className="tr-side__desc">
-                    Expert Ayurvedic gynecological care from{" "}
+                    Expert gynecology and skin care from{" "}
                     <strong>{CLINIC.doctor}</strong> — in a warm, supportive
                     environment.
                   </p>

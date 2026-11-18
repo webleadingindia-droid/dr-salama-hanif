@@ -30,12 +30,12 @@ export default function HomePage() {
             <div className="col-lg-6">
               <div className="hero-v2__badge">
                 <span className="hero-v2__badge-dot" />
-                <span>Trusted Ayurvedic Women&apos;s Health Care</span>
+                <span>Gynecologist &amp; Skin Expert in Raebareli</span>
                 <i className="bi bi-shield-check-fill" />
               </div>
 
               <h1 className="hero-v2__title">
-                Expert Ayurvedic
+                Expert
                 <br />
                 Care for{" "}
                 <span className="hero-v2__title-accent">
@@ -49,9 +49,10 @@ export default function HomePage() {
               </h1>
 
               <p className="hero-v2__tagline">
-                Dedicated to Hope, Healing and Recovery.{" "}
-                <strong>{CLINIC.doctor}</strong> brings compassionate, expert Ayurvedic
-                gynecological care to Raebareli — rooted in tradition, guided by science.
+                {CLINIC.tagline}.{" "}
+                <strong>{CLINIC.doctor}</strong>, a BHU graduate and experienced women&apos;s
+                health specialist, brings compassionate, expert care to Raebareli — modern
+                medicine with patient trust.
               </p>
 
               <div className="hero-v2__ctas">
@@ -89,7 +90,7 @@ export default function HomePage() {
                   <div className="hero-v2__img-ring" aria-hidden />
                   <img
                     src="https://plain-apac-prod-public.komododecks.com/202611/16/VKuscGrJVlV1QXuNCOud/image.png"
-                    alt="Ayurvedic treatment for women's wellness"
+                    alt="Dr. Salama Haneef"
                     className="hero-v2__img"
                   />
                   <div className="hero-v2__img-glow" aria-hidden />
@@ -100,8 +101,8 @@ export default function HomePage() {
                     <i className="bi bi-patch-check-fill" />
                   </div>
                   <div>
-                    <strong>BAMS + MD</strong>
-                    <small>Ayurveda Specialist</small>
+                    <strong>BHU Graduate</strong>
+                    <small>Gynecologist &amp; Skin Expert</small>
                   </div>
                 </div>
 
@@ -138,16 +139,16 @@ export default function HomePage() {
           {[0, 1].map((i) => (
             <span className="marquee-strip__group" key={i} aria-hidden={i === 1}>
               <span className="marquee-chip">
-                <i className="bi bi-gift-fill" /> 50% OFF on First Ayurvedic Consultation
+                <i className="bi bi-gift-fill" /> 50% OFF on First Consultation
               </span>
               <span className="marquee-chip">
-                <i className="bi bi-capsule-pill" /> 15% Discount on Ayurvedic Medicines
+                <i className="bi bi-capsule-pill" /> 15% Discount on Medicines
               </span>
               <span className="marquee-chip">
-                <i className="bi bi-droplet-fill" /> 30% OFF on Lab &amp; Prakriti Tests
+                <i className="bi bi-droplet-fill" /> 30% OFF on Blood &amp; Urine Tests
               </span>
               <span className="marquee-chip">
-                <i className="bi bi-heart-fill" /> Expert Ayurvedic Women&apos;s Health Care
+                <i className="bi bi-heart-fill" /> Expert Women&apos;s Health Care by Dr. Salama Haneef
               </span>
               <span className="marquee-chip">
                 <i className="bi bi-telephone-fill" /> Call: {CLINIC.phone}
@@ -164,18 +165,18 @@ export default function HomePage() {
             <div className="col-lg-6 fade-up">
               <div className="eyebrow">
                 <span className="eyebrow__line" />
-                <span>About We Care Medical Zone</span>
+                <span>About Dr. Salama Haneef</span>
               </div>
               <h2 className="section-title-v2">
-                Compassionate Ayurvedic Care,
+                Compassionate Care,
                 <br />
-                <span className="text-pink">Modern Healing</span>
+                <span className="text-pink">Modern Medicine</span>
               </h2>
               <p className="text-muted mb-4" style={{ lineHeight: 1.8 }}>
-                We Care Medical Zone is Raebareli&apos;s trusted destination for women&apos;s
-                health. Led by <strong>{CLINIC.doctor}</strong>, a highly experienced Ayurvedic
-                Gynecologist &amp; Obstetrician, we provide personalized, evidence-based Ayurvedic
-                treatment in a warm and supportive environment.
+                <strong>{CLINIC.doctor}</strong> is a Banaras Hindu University (BHU) graduate and an
+                experienced women&apos;s health specialist — Gynecologist &amp; Skin Expert and
+                Clinical Nutritionist. She provides personalised, compassionate treatment in a
+                warm and supportive environment in Raebareli.
               </p>
 
               <ul className="check-list">
@@ -211,7 +212,7 @@ export default function HomePage() {
                 <div className="about-v2__main">
                   <img
                     src="https://ayurhealing.net/wp-content/uploads/2025/08/ayurvedic-treatment-for-womens-wellness.jpg"
-                    alt="We Care Medical Zone clinic"
+                    alt="Dr. Salama Haneef"
                   />
                   <div className="about-v2__main-badge">
                     <i className="bi bi-award-fill" />
@@ -245,15 +246,15 @@ export default function HomePage() {
           <div className="section-head-v2 text-center fade-up">
             <div className="eyebrow eyebrow--center">
               <span className="eyebrow__line" />
-              <span>Our Ayurvedic Services</span>
+              <span>Our Services</span>
               <span className="eyebrow__line" />
             </div>
             <h2 className="section-title-v2">
               Comprehensive Care for <span className="text-pink">Every Stage</span> of Womanhood
             </h2>
             <p className="section-sub-v2">
-              From routine Ayurvedic check-ups to specialized treatments — we cover every aspect
-              of women&apos;s health naturally.
+              From routine check-ups to specialized treatments — complete care for women&apos;s
+              health, skin and wellness.
             </p>
           </div>
 
@@ -298,7 +299,7 @@ export default function HomePage() {
               <span className="eyebrow__line" />
             </div>
             <h2 className="section-title-v2">
-              The We Care <span className="text-pink">Ayurvedic Difference</span>
+              Why Choose <span className="text-pink">Dr. Salama Haneef</span>
             </h2>
           </div>
 
@@ -329,7 +330,7 @@ export default function HomePage() {
               <div className="col-lg-7">
                 <div className="offers-v2__eyebrow">
                   <i className="bi bi-stars" />
-                  <span>Exclusive Ayurvedic Offers</span>
+                  <span>Exclusive Offers</span>
                 </div>
                 <h2 className="offers-v2__title">
                   Special Discounts for
@@ -374,11 +375,11 @@ export default function HomePage() {
           <div className="section-head-v2 text-center fade-up">
             <div className="eyebrow eyebrow--center">
               <span className="eyebrow__line" />
-              <span>Ayurvedic Women&apos;s Health Awareness</span>
+              <span>Women&apos;s Health Awareness</span>
               <span className="eyebrow__line" />
             </div>
             <h2 className="section-title-v2">
-              Know Your Health <span className="text-pink">Through Ayurveda</span>
+              Know Your Health <span className="text-pink">Through Awareness</span>
             </h2>
           </div>
 
@@ -406,11 +407,11 @@ export default function HomePage() {
           <div className="section-head-v2 text-center fade-up">
             <div className="eyebrow eyebrow--center">
               <span className="eyebrow__line" />
-              <span>Patient Stories</span>
+              <span>Our Promise</span>
               <span className="eyebrow__line" />
             </div>
             <h2 className="section-title-v2">
-              What Our Patients Say About <span className="text-pink">Ayurvedic Care</span>
+              Our Promise to <span className="text-pink">Every Patient</span>
             </h2>
           </div>
 
@@ -451,11 +452,11 @@ export default function HomePage() {
           <div className="section-head-v2 text-center fade-up">
             <div className="eyebrow eyebrow--center">
               <span className="eyebrow__line" />
-              <span>Our Ayurvedic Clinic</span>
+              <span>Our Care Areas</span>
               <span className="eyebrow__line" />
             </div>
             <h2 className="section-title-v2">
-              Inside <span className="text-pink">We Care</span>
+              Complete Care for <span className="text-pink">Women</span>
             </h2>
           </div>
 
@@ -477,7 +478,7 @@ export default function HomePage() {
 
           <div className="text-center mt-4">
             <Link href="/gallery" className="btn-hero btn-hero--ghost">
-              <span>View Full Gallery</span>
+              <span>View All Care Areas</span>
               <i className="bi bi-arrow-right btn-hero__arrow" />
             </Link>
           </div>
@@ -500,9 +501,9 @@ export default function HomePage() {
                     <span>Begin Your Healing Journey</span>
                   </div>
                   <h2 className="cta-v2__title">
-                    Ready to Experience
+                    Ready to Take Care of
                     <br />
-                    <span className="cta-v2__title-accent">Ayurvedic Healing?</span>
+                    <span className="cta-v2__title-accent">Your Health?</span>
                   </h2>
                   <p className="cta-v2__desc">
                     Schedule your consultation today and get <strong>50% off</strong> on your
@@ -555,8 +556,8 @@ export default function HomePage() {
                     <i className="bi bi-hospital-fill" />
                   </div>
                   <div>
-                    <h3>We Care Medical Zone</h3>
-                    <p>{CLINIC.doctor} – Ayurvedic Gynecologist &amp; Obstetrician</p>
+                    <h3>{CLINIC.doctor}</h3>
+                    <p>{CLINIC.role}</p>
                   </div>
                 </div>
 
@@ -621,7 +622,7 @@ export default function HomePage() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="We Care Medical Zone Location"
+                  title="Dr. Salama Haneef clinic location"
                 />
               </div>
             </div>
