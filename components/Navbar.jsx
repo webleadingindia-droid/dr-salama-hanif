@@ -40,7 +40,6 @@ export default function Navbar() {
           <nav className="nav-bar">
             {/* Brand */}
             <Link href="/" className="nav-brand" aria-label="Home">
-              <span className="nav-brand__glow" aria-hidden />
               <span className="nav-brand__mark">
                 <img
                   src="https://plain-apac-prod-public.komododecks.com/202611/16/67xMxn73fwp6hypx41d1/image.png"
@@ -134,9 +133,7 @@ export default function Navbar() {
                     className={`mobile-link ${active ? "is-active" : ""}`}
                     onClick={() => setOpen(false)}
                   >
-                    <span className="mobile-link__index">
-                      0{i + 1}
-                    </span>
+                    <span className="mobile-link__index">0{i + 1}</span>
                     <span className="mobile-link__label">{link.label}</span>
                     <i className="bi bi-arrow-up-right mobile-link__arrow" />
                   </Link>
@@ -171,24 +168,24 @@ export default function Navbar() {
           --brand-2: #ff6f91;
           --ink: #1a1220;
           --muted: #6b6173;
-          --bg-glass: rgba(255, 255, 255, 0.72);
           --border-soft: rgba(26, 18, 32, 0.08);
         }
 
-        /* Shell (floating pill on scroll) */
+        /* ===== SHELL (flat sticky header) ===== */
         .nav-shell {
-          padding: 14px 0;
-          transition: padding 0.35s ease, backdrop-filter 0.35s ease;
+          padding: 10px 0;
           z-index: 1040;
-          background: linear-gradient(
-            to bottom,
-            rgba(255, 255, 255, 0.85),
-            rgba(255, 255, 255, 0)
-          );
+          background: rgba(255, 255, 255, 0.92);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          border-bottom: 1px solid var(--border-soft);
+          transition: padding 0.35s ease, background 0.35s ease,
+            box-shadow 0.35s ease;
         }
         .nav-shell--scrolled {
-          padding: 8px 0;
-          background: transparent;
+          padding: 6px 0;
+          background: rgba(255, 255, 255, 0.98);
+          box-shadow: 0 2px 12px rgba(26, 18, 32, 0.05);
         }
 
         .nav-bar {
@@ -196,47 +193,37 @@ export default function Navbar() {
           align-items: center;
           justify-content: space-between;
           gap: 16px;
-          padding: 10px 14px 10px 14px;
-          border-radius: 999px;
-          background: var(--bg-glass);
-          backdrop-filter: saturate(180%) blur(18px);
-          -webkit-backdrop-filter: saturate(180%) blur(18px);
-          border: 1px solid var(--border-soft);
-          box-shadow: 0 8px 30px rgba(26, 18, 32, 0.06),
-            inset 0 1px 0 rgba(255, 255, 255, 0.6);
-          transition: all 0.35s ease;
-        }
-        .nav-shell--scrolled .nav-bar {
-          box-shadow: 0 12px 40px rgba(194, 24, 91, 0.12),
-            0 2px 8px rgba(26, 18, 32, 0.06),
-            inset 0 1px 0 rgba(255, 255, 255, 0.7);
+          padding: 8px 0;
+          border-radius: 0;
+          background: transparent;
+          border: none;
+          box-shadow: none;
         }
 
-        /* Brand */
+        /* ===== BRAND ===== */
         .nav-brand {
-          position: relative;
           display: inline-flex;
           align-items: center;
-          padding: 4px 6px;
-          border-radius: 999px;
+          padding: 0;
+          border-radius: 0;
+          text-decoration: none;
         }
         .nav-brand__mark {
           display: grid;
           place-items: center;
-          width: 88px;
-          height: 48px;
+          width: 84px;
+          height: 46px;
           overflow: hidden;
           position: relative;
-          z-index: 2;
         }
         .nav-brand__mark img {
           width: 100%;
           height: 100%;
           object-fit: contain;
-          padding: 6px;
+          padding: 4px;
         }
 
-        /* Desktop links */
+        /* ===== DESKTOP LINKS ===== */
         .nav-links {
           list-style: none;
           margin: 0;
@@ -247,44 +234,26 @@ export default function Navbar() {
           position: relative;
           display: inline-flex;
           align-items: center;
-          padding: 10px 16px;
-          border-radius: 999px;
+          padding: 8px 14px;
+          border-radius: 8px;
           font-size: 0.92rem;
           font-weight: 500;
           letter-spacing: 0.01em;
           color: var(--ink);
           text-decoration: none;
-          transition: color 0.25s ease, background 0.25s ease;
-        }
-        .nav-link-custom::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          border-radius: inherit;
-          background: linear-gradient(
-            135deg,
-            rgba(194, 24, 91, 0.08),
-            rgba(255, 111, 145, 0.12)
-          );
-          opacity: 0;
-          transition: opacity 0.25s ease;
+          transition: color 0.2s ease, background 0.2s ease;
         }
         .nav-link-custom:hover {
           color: var(--brand);
         }
-        .nav-link-custom:hover::before {
-          opacity: 1;
-        }
         .nav-link-custom.is-active {
           color: var(--brand);
-        }
-        .nav-link-custom.is-active::before {
-          opacity: 1;
+          font-weight: 600;
         }
         .nav-link__dot {
           position: absolute;
           left: 50%;
-          bottom: 2px;
+          bottom: 1px;
           width: 4px;
           height: 4px;
           border-radius: 50%;
@@ -297,59 +266,57 @@ export default function Navbar() {
           transform: translateX(-50%) scale(1);
         }
 
-        /* Call icon */
+        /* ===== CALL BUTTON ===== */
         .nav-call {
           display: inline-flex;
           align-items: center;
           gap: 6px;
-          width: 40px;
-          height: 40px;
+          height: 38px;
           justify-content: center;
-          border-radius: 50%;
+          padding: 0 14px;
+          border-radius: 999px;
           color: var(--brand);
           background: rgba(194, 24, 91, 0.08);
           text-decoration: none;
           font-size: 0.85rem;
           font-weight: 600;
-          transition: all 0.25s ease;
+          transition: background 0.25s ease, transform 0.25s ease;
         }
         .nav-call:hover {
           background: rgba(194, 24, 91, 0.15);
+          color: var(--brand);
           transform: translateY(-1px);
         }
-        @media (min-width: 1200px) {
-          .nav-call {
-            width: auto;
-            padding: 0 14px;
-            border-radius: 999px;
-          }
-        }
 
-        /* Primary CTA */
+        /* ===== PRIMARY CTA ===== */
         .btn-book {
           position: relative;
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          padding: 12px 20px;
+          padding: 10px 18px;
           border-radius: 999px;
-          font-size: 0.88rem;
+          font-size: 0.85rem;
           font-weight: 600;
           color: #fff;
           text-decoration: none;
-          background: linear-gradient(135deg, var(--brand) 0%, #e91e63 50%, var(--brand-2) 100%);
+          background: linear-gradient(
+            135deg,
+            var(--brand) 0%,
+            #e91e63 50%,
+            var(--brand-2) 100%
+          );
           background-size: 200% 100%;
-          box-shadow: 0 8px 20px rgba(194, 24, 91, 0.32),
-            inset 0 1px 0 rgba(255, 255, 255, 0.25);
+          box-shadow: 0 4px 14px rgba(194, 24, 91, 0.25);
           overflow: hidden;
           transition: transform 0.25s ease, box-shadow 0.25s ease,
             background-position 0.6s ease;
         }
         .btn-book:hover {
           color: #fff;
-          transform: translateY(-2px);
+          transform: translateY(-1px);
           background-position: 100% 0;
-          box-shadow: 0 12px 26px rgba(194, 24, 91, 0.42);
+          box-shadow: 0 6px 18px rgba(194, 24, 91, 0.35);
         }
         .btn-book__shine {
           position: absolute;
@@ -373,7 +340,7 @@ export default function Navbar() {
           }
         }
         .btn-book i {
-          font-size: 1rem;
+          font-size: 0.95rem;
         }
         .btn-book--full {
           width: 100%;
@@ -382,23 +349,22 @@ export default function Navbar() {
           font-size: 0.95rem;
         }
 
-        /* Burger (mobile) */
+        /* ===== BURGER ===== */
         .nav-burger {
           position: relative;
           width: 44px;
           height: 20px;
           border: 0;
           border-radius: 50%;
-          background: white;
+          background: transparent;
           display: grid;
           place-items: center;
           gap: 5px;
           cursor: pointer;
-          transition: background 0.25s ease;
         }
         .nav-burger span {
           display: block;
-          width: 18px;
+          width: 20px;
           height: 2px;
           border-radius: 2px;
           background: var(--brand);
@@ -415,7 +381,7 @@ export default function Navbar() {
           transform: translateY(-7px) rotate(-45deg);
         }
 
-        /* ===== MOBILE FULLSCREEN SHEET ===== */
+        /* ===== MOBILE SHEET ===== */
         .mobile-sheet {
           position: fixed;
           inset: 0;
@@ -450,7 +416,7 @@ export default function Navbar() {
           inset: 0;
           display: flex;
           flex-direction: column;
-          padding: 22px 22px 22px;
+          padding: 22px;
           background: #fffdfc;
           transform: translateY(8px);
           opacity: 0;
@@ -487,7 +453,6 @@ export default function Navbar() {
           place-items: center;
           cursor: pointer;
         }
-
         .mobile-sheet__links {
           list-style: none;
           margin: 18px 0 0;
@@ -498,7 +463,6 @@ export default function Navbar() {
         .mobile-sheet__links li {
           opacity: 0;
           transform: translateY(14px);
-          animation: none;
         }
         .mobile-sheet.is-open .mobile-sheet__links li {
           animation: slideUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
@@ -509,7 +473,6 @@ export default function Navbar() {
             transform: translateY(0);
           }
         }
-
         .mobile-link {
           display: flex;
           align-items: center;
@@ -548,7 +511,6 @@ export default function Navbar() {
           color: var(--brand);
           transform: translate(2px, -2px);
         }
-
         .mobile-sheet__foot {
           display: grid;
           gap: 10px;
@@ -575,13 +537,13 @@ export default function Navbar() {
           color: var(--brand);
         }
 
-        /* Offset page content (adjust if you already have spacing) */
+        /* ===== BODY OFFSET ===== */
         body {
-          padding-top: 84px;
+          padding-top: 72px;
         }
         @media (max-width: 991.98px) {
           body {
-            padding-top: 78px;
+            padding-top: 66px;
           }
           .nav-brand__mark {
             width: 72px;
