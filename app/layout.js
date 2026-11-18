@@ -2,6 +2,7 @@ import Script from "next/script";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./globals.css";
+import { SITE_URL } from "@/lib/site";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,6 +10,7 @@ import AppointmentModal from "@/components/AppointmentModal";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Dr. Salama Haneef | Gynecologist & Skin Expert in Raebareli",
     template: "%s | Dr. Salama Haneef",

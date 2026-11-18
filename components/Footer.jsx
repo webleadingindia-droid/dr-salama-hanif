@@ -30,6 +30,7 @@ export default function Footer() {
             <Link href="/treatments" className="footer-link">Treatments</Link>
             <Link href="/gallery" className="footer-link">Care Areas</Link>
             <Link href="/blog" className="footer-link">Blog</Link>
+            <Link href="/raebareli" className="footer-link">Raebareli Health Guides</Link>
             <Link href="/contact" className="footer-link">Contact</Link>
           </div>
 

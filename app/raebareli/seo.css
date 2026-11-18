@@ -1,0 +1,52 @@
+/* Raebareli SEO pages — scoped styles (prefix .rb) */
+.rb { color: #2b2433; }
+.rb h2 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); font-weight: 700; margin: 2rem 0 .8rem; color: #1a1220; }
+.rb p, .rb li { line-height: 1.75; font-size: .98rem; }
+.rb-lead { font-size: 1.05rem; color: #4a4157; }
+.rb-short { background: linear-gradient(135deg, var(--pink-light, #fdeaf3), var(--blue-light, #eaf3fd)); border-left: 4px solid var(--pink); border-radius: 12px; padding: 16px 18px; margin-bottom: 1.2rem; font-size: .97rem; line-height: 1.7; }
+.rb-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 1.4rem 0; }
+.rb-fig { margin: 0; position: relative; border-radius: 14px; overflow: hidden; background: #f3eef6; aspect-ratio: 4 / 3; }
+.rb-fig--0 { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+.rb-fig img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.rb-fig figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 10px 8px; font-size: .74rem; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,.6)); }
+.rb-list { padding-left: 1.2rem; }
+.rb-list li { margin-bottom: .35rem; }
+.rb-list--check { list-style: none; padding-left: 0; }
+.rb-list--check li { padding-left: 1.6rem; position: relative; }
+.rb-list--check li::before { content: "\2713"; position: absolute; left: 0; color: var(--pink); font-weight: 700; }
+.rb-steps { padding-left: 1.2rem; }
+.rb-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1rem; }
+.rb-chips { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.rb-chips a { display: inline-block; padding: 6px 14px; border-radius: 999px; border: 1px solid rgba(0,0,0,.12); font-size: .85rem; color: inherit; text-decoration: none; }
+.rb-chips a:hover { border-color: var(--pink); color: var(--pink); }
+.rb-nap { font-style: normal; line-height: 1.8; }
+.rb-map { border-radius: 14px; overflow: hidden; margin-top: 12px; }
+.rb-faq__item { border: 1px solid rgba(0,0,0,.08); border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; background: #fff; }
+.rb-faq__item h3 { font-size: 1rem; font-weight: 700; margin: 0 0 6px; }
+.rb-faq__item p { margin: 0; }
+.rb-related { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 18px; }
+.rb-related a { color: var(--pink); text-decoration: none; }
+.rb-related a:hover { text-decoration: underline; }
+.rb-disclaimer { font-size: .8rem; color: #7a7185; margin-top: 2rem; }
+.rb-side { position: sticky; top: 100px; display: grid; gap: 16px; }
+.rb-side__card { background: #fff; border: 1px solid rgba(0,0,0,.08); border-radius: 16px; padding: 20px; }
+.rb-side__card--primary { background: linear-gradient(135deg, var(--pink), var(--blue)); color: #fff; border: 0; }
+.rb-side__card--primary h3 { color: #fff; font-size: 1.15rem; margin-bottom: 4px; }
+.rb-side__card--primary p { color: rgba(255,255,255,.85); font-size: .88rem; }
+.rb-side__card--primary small { display: block; margin-top: 10px; opacity: .85; }
+.rb-side__card h4 { font-size: .95rem; font-weight: 700; margin-bottom: 8px; }
+.rb-side__card ul { list-style: none; padding: 0; margin: 0; }
+.rb-side__card li a { color: inherit; text-decoration: none; font-size: .9rem; }
+.rb-side__card li a:hover { color: var(--pink); }
+.rb-hub__card { background: #fff; border: 1px solid rgba(0,0,0,.08); border-radius: 16px; padding: 20px; height: 100%; }
+.rb-hub__card h2 { font-size: 1.1rem; margin: 0 0 10px; }
+.rb-hub__card ul { list-style: none; padding: 0; margin: 0; }
+.rb-hub__card li { margin-bottom: 6px; }
+.rb-hub__card a { color: inherit; text-decoration: none; font-size: .9rem; }
+.rb-hub__card a:hover { color: var(--pink); }
+@media (max-width: 767px) {
+  .rb-gallery { grid-template-columns: repeat(2, 1fr); }
+  .rb-fig--0 { grid-column: span 2; grid-row: auto; aspect-ratio: 16 / 10; }
+  .rb-related { grid-template-columns: 1fr; }
+  .rb-side { position: static; }
+}
